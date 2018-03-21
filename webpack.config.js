@@ -7,6 +7,15 @@ module.exports = {
         path: path.join(__dirname, 'public'),
         filename: 'bundle.js'
     },
+    resolve: {
+        modules: [
+            'node_modules',
+            path.resolve(__dirname + '/src')
+        ],
+        alias: {
+            src: path.resolve(__dirname + '/src')
+        }
+    },
     module: {
         rules: [{
             loader:'babel-loader',
@@ -23,6 +32,7 @@ module.exports = {
     },
     devtool: 'cheap-module-eval-source-map',
     devServer: {
-        contentBase: path.join(__dirname, 'public')
+        contentBase: path.join(__dirname, 'public'),
+        historyApiFallback: true
     }
 };
