@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import { SingleDatePicker} from 'react-dates'; 
-
+import 'react-dates/lib/css/_datepicker.css';
 
 // const ahora = moment();
 // console.log(ahora.format('MMM Do, YYYY') );
@@ -13,7 +13,7 @@ class GastosForm extends React.Component {
         descripcion: props.gasto ?  props.gasto.descripcion : '' , 
         nota: props.gasto ? props.gasto.nota : '' , 
         monto: props.gasto ? (props.gasto.monto / 100 ).toString() : '', 
-        fecha: props.gasto ? moment(props.gasto.fecha) : moment(),
+        date: props.gasto ? moment(props.gasto.fecha) : moment(),
         calendarFocused : false,
         error: ''
         };
@@ -51,7 +51,7 @@ class GastosForm extends React.Component {
             this.props.onSubmit({
                 descripcion: this.state.descripcion,
                 monto: parseFloat(this.state.monto, 10) * 100,
-                date: this.state.fecha.valueOf(), // nmero regular que representa ese| valor
+                date: this.state.date.valueOf(), // nmero regular que representa ese| valor
                 nota: this.state.nota
             });
         }
@@ -78,7 +78,7 @@ class GastosForm extends React.Component {
             <SingleDatePicker
             date={this.state.date}
             onDateChange={this.onDatesChange}
-            focused={this.state.calendarioEnfocado} 
+            focused={this.state.calendarFocused} 
             onFocusChange={this.onFocusChange}
             numberOfMonths={1}
             isOutsideRange={()=>false}
