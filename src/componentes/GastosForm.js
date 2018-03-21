@@ -13,7 +13,7 @@ class GastosForm extends React.Component {
         descripcion: props.gasto ?  props.gasto.descripcion : '' , 
         nota: props.gasto ? props.gasto.nota : '' , 
         monto: props.gasto ? (props.gasto.monto / 100 ).toString() : '', 
-        date: props.gasto ? moment(props.gasto.fecha) : moment(),
+        date: props.gasto ? moment(props.gasto.date) : moment(),
         calendarFocused : false,
         error: ''
         };
@@ -38,7 +38,7 @@ class GastosForm extends React.Component {
             this.setState(()=> ({ date }));
         }
     };
-    // focused
+    // focused - requerido
     onFocusChange = ({focused}) => {
         this.setState(() => ({ calendarFocused: focused }));
     };
@@ -51,7 +51,7 @@ class GastosForm extends React.Component {
             this.props.onSubmit({
                 descripcion: this.state.descripcion,
                 monto: parseFloat(this.state.monto, 10) * 100,
-                date: this.state.date.valueOf(), // nmero regular que representa ese| valor
+                date: this.state.date.valueOf(), // nmero regular que representa esa fecha
                 nota: this.state.nota
             });
         }

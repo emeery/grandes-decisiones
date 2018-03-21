@@ -3,14 +3,14 @@ import moment from 'moment';
 
 export default (gastos, {texto, ordenarPor, startDate, endDate}) => {
     return gastos.filter((gasto) => {
-        const creadoEnElMomento = moment(gasto.fecha);
+        const creadoEnElMomento = moment(gasto.date);
         const fechaInicioMatch = startDate ? startDate.isSameOrBefore(creadoEnElMomento, 'day') : true;
         const fechaFinMatch = endDate ? endDate.isSameOrAfter(creadoEnElMomento, 'day'): true;
         const textoMatch = gasto.descripcion.toLowerCase().includes(texto);
         return textoMatch && fechaInicioMatch && fechaFinMatch;
     }).sort(( a , b )=> {
-        if (ordenarPor === 'fecha') {
-            return a.fecha < b.fecha ? 1 : -1;
+        if (ordenarPor === 'date') {
+            return a.date < b.date ? 1 : -1;
         } else if (ordenarPor === 'monto') {
             return a.monto < b.monto ? 1 : -1;
         }

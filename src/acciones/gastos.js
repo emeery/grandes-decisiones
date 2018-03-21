@@ -4,7 +4,7 @@ export const crearGasto = ({
     descripcion = '', 
     nota = '',
     monto = 0,
-    fecha = 0
+    date = 0
  }) => ({
     type: 'SUMA_GASTO',
     gasto: {
@@ -12,7 +12,7 @@ export const crearGasto = ({
         descripcion,
         nota,
         monto,
-        fecha
+        date
     }
 });
 // 

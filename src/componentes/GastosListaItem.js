@@ -7,12 +7,12 @@ import { Link } from 'react-router-dom';
         
 //dispatch, id, descripcion, monto, fecha
 const GastosListaItem = ({
-    id, descripcion, monto, fecha}) => (
+    id, descripcion, monto, date}) => (
     <div>
         <Link to={`/edita/${id}`}>
         <h3> {descripcion} </h3>
         </Link>
-        <h2> $ {monto} - {fecha}</h2>
+        <h2> $ {monto} - {date}</h2>
        
     </div>
 );

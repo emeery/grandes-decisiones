@@ -35,14 +35,14 @@ class GastosListaFiltros extends React.Component {
         <select 
         value={this.props.filtros.ordenarPor}
         onChange={(e) => {
-            if (e.target.value === 'fecha') {
+            if (e.target.value === 'date') {
                 this.props.dispatch(ordenarPorFecha() );
             } else if (e.target.value === 'monto') {
                 this.props.dispatch(ordenarPorMonto() );
             }
         }}
         >
-        <option value='fecha'>
+        <option value='date'>
             fecha </option>
         <option value='monto'>
             monto </option>

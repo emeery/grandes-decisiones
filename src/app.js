@@ -11,8 +11,8 @@ import './estilos/styles.scss';
 
 const tienda = configuraTienda();
 tienda.dispatch(crearGasto({ descripcion: 'factura Agua', monto: 4500}) );
-tienda.dispatch(crearGasto({ descripcion: 'factura Gas', fecha: 1000}) );
-tienda.dispatch(crearGasto({ descripcion: 'renta', monto: 20000 }));
+tienda.dispatch(crearGasto({ descripcion: 'factura Gas', date: 1000}) );
+tienda.dispatch(crearGasto({ descripcion: 'renta', monto: 109500 }));
 
 // setTimeout(() => {
 //     tienda.dispatch(establecerTextoFiltros('factura'));

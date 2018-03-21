@@ -3,7 +3,7 @@
 import moment from 'moment';
 const filtrosReducerDefaultState = {
     texto: '',
-    ordenarPor: 'fecha',
+    ordenarPor: 'date',
     startDate: moment().startOf('month'),
     endDate: moment().startOf('month')
 };
@@ -15,11 +15,11 @@ export default (state=filtrosReducerDefaultState, accion) => {
         case 'ORDENA_POR_MONTO':
         return {...state, ordenarPor: 'monto' }
         case 'ORDENA_POR_FECHA':
-        return {...state, ordenarPor: 'fecha'}
+        return {...state, ordenarPor: 'date'}
         case 'ESTABLECE_FECHA_INICIO':
         return {...state, startDate: accion.startDate}
         case 'ESTABLECE_FECHA_FIN':
-        return {...state, fechaFin: accion.endDate}
+        return {...state, endDate: accion.endDate}
         default: return state; 
     }
 }; 

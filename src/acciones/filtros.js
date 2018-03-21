@@ -11,12 +11,12 @@ export const ordenarPorFecha = () => ({
     type: 'ORDENA_POR_FECHA'
 });
 
-export const establecerFechaInicio = (fechaInicio) => ({
+export const establecerFechaInicio = (startDate) => ({
     type: 'ESTABLECE_FECHA_INICIO',
-    fechaInicio
+    startDate
 });
 
-export const establecerFechaFin = (fechaFin) => ({
+export const establecerFechaFin = (endDate) => ({
     type: 'ESTABLECE_FECHA_FIN',
-    fechaFin
+    endDate
 });
