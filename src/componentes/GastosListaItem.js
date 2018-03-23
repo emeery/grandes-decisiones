@@ -12,7 +12,7 @@ const GastosListaItem = ({
         <Link to={`/edita/${id}`}>
         <h3> {descripcion} </h3>
         </Link>
-        <h2> $ {monto} - {date}</h2>
+        <h2> {monto} - {date}</h2>
        
     </div>
 );

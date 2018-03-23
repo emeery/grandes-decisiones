@@ -63,7 +63,7 @@ class GastosForm extends React.Component {
                 {this.state.error}</p>}   
             <input 
             type='text'
-            placeholder='descripcion'
+            placeholder='Descripcion'
             autoFocus
             value={this.state.descripcion}
             onChange={this.descripcionCambio} 

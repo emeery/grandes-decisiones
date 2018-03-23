@@ -5,8 +5,9 @@ export const crearGasto = ({
     nota = '',
     monto = 0,
     date = 0
- }) => ({
-    type: 'SUMA_GASTO',
+ } = {} 
+) => ({
+    type: 'CREAR_GASTO',
     gasto: {
         id: uuid(),
         descripcion,
@@ -22,7 +23,7 @@ export const removerGasto = ({ id } = {}) => ({
 });
 // editar descripcion o monto, 
 export const editarGasto = (id, update) => ({
-    type: 'EDITA_GASTO',
+    type: 'EDITAR_GASTO',
     id,
     update
 });

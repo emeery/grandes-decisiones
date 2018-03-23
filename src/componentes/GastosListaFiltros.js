@@ -15,8 +15,10 @@ class GastosListaFiltros extends React.Component {
         calendarFocused: null
     };
     onDatesChange = ({startDate, endDate}) => {
-        this.props.dispatch(establecerFechaInicio(startDate) );
-        this.props.dispatch(establecerFechaFin(endDate) );
+        this.props.dispatch(
+            establecerFechaInicio(startDate) );
+        this.props.dispatch(
+            establecerFechaFin(endDate) );
     };
     onFocusChange = (calendarFocused) => {
         this.setState(() => ({ calendarFocused }));
@@ -29,7 +31,8 @@ class GastosListaFiltros extends React.Component {
         type='text' 
         value={this.props.filtros.texto}
         onChange={(e) => {
-            this.props.dispatch(establecerTextoFiltros(e.target.value));
+            this.props.dispatch(
+                establecerTextoFiltros(e.target.value));
         }} />
         
         <select 

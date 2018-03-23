@@ -10,9 +10,12 @@ import 'normalize.css/normalize.css';
 import './estilos/styles.scss';
 
 const tienda = configuraTienda();
-tienda.dispatch(crearGasto({ descripcion: 'factura Agua', monto: 4500}) );
-tienda.dispatch(crearGasto({ descripcion: 'factura Gas', date: 1000}) );
-tienda.dispatch(crearGasto({ descripcion: 'renta', monto: 109500 }));
+tienda.dispatch(
+    crearGasto({ descripcion: 'factura Agua', monto: 4500}) );
+tienda.dispatch(
+    crearGasto({ descripcion: 'factura Gas', date: 1000}) );
+tienda.dispatch(
+    crearGasto({ descripcion: 'renta', monto: 2000 }));
 
 // setTimeout(() => {
 //     tienda.dispatch(establecerTextoFiltros('factura'));
@@ -23,7 +26,8 @@ tienda.dispatch(crearGasto({ descripcion: 'renta', monto: 109500 }));
 // }, 3000 );
 // imnutable: objeto que no puede cambiar su estado
 const estado = tienda.getState();
-const gastosVisibles = mostrarGastos(estado.gastos, estado.filtros );
+const gastosVisibles = mostrarGastos(
+    estado.gastos, estado.filtros );
 console.log(gastosVisibles);
 
 const jsx = (<div>
