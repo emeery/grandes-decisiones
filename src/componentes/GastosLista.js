@@ -4,7 +4,7 @@ import GastosListaItem from './GastosListaItem';
 import seleccionaGastos from '../selectores/gastos';
 
 // conecta tu componente a la tienda redux
-const GastosLista = (props) => (
+export const GastosLista = (props) => (
     <div><h1>Expendio Lista</h1>
         {props.gastos.length}
         {props.gastos.map((gastitos) => {

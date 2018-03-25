@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`deberia renderizar la cabecera  1`] = `
+<div>
+  <h1>
+    Expendio Lista
+  </h1>
+  3
+  <GastosListaItem
+    date={0}
+    descripcion="goma"
+    id="1"
+    monto={195}
+    nota=""
+  />
+  <GastosListaItem
+    date={-345600000}
+    descripcion="renta"
+    id="2"
+    monto={109500}
+    nota=""
+  />
+  <GastosListaItem
+    date={345600000}
+    descripcion="tarjeta credito"
+    id="3"
+    monto={4500}
+    nota=""
+  />
+</div>
+`;

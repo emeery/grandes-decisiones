@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Cabecera from '../../componentes/cabecera';
+import Cabecera from '../../componentes/Cabecera';
 
 // .button, #id, h1
 test('deberia renderizar la cabecera ', ()=>{
