@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`deberia renderizar la cabecera  1`] = `
+<header>
+  <h1>
+    Libros de Notas.
+  </h1>
+  <h3>
+    La pieza faltante.
+  </h3>
+  <h4>
+    throw all that.
+  </h4>
+  <NavLink
+    activeClassName="is-active"
+    exact={true}
+    to="/"
+  >
+    Escritorio
+  </NavLink>
+  <NavLink
+    activeClassName="is-active"
+    to="/crealo"
+  >
+    Crear Gastos
+  </NavLink>
+</header>
+`;

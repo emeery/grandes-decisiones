@@ -5,7 +5,7 @@ const filtrosReducerDefaultState = {
     texto: '',
     ordenarPor: 'date',
     startDate: moment().startOf('month'),
-    endDate: moment().startOf('month')
+    endDate: moment().endOf('month')
 };
  // llama a las acciones 
 export default (state=filtrosReducerDefaultState, accion) => {

@@ -37,8 +37,7 @@ test(' deberia filtrar por el valor texto', ()=>{
     ]);
 });
 
-test(' deberia filtrar por fecha inicio',
-    ()=>{
+test('deberia filtrar por fecha inicio',()=>{
     const filtros = {
         texto:'',
         ordenarPor: 'date',

@@ -3,8 +3,8 @@ import {
     removerGasto, 
     editarGasto } from '../../acciones/gastos';
 
-    const suma = (a, b) => a + b;
-    const unSaludo = (nombre='anonimo') => `hola ${nombre}!`;
+ const suma = (a, b) => a + b;
+    // const unSaludo = (nombre='anonimo') => `hola ${nombre}!`;
 
 test('esperamos dos numeros que sumen 13',()=>{
     const resultado = suma(8, 5);

@@ -33,7 +33,7 @@ test('establecer texto filtros', () => {
     });
 });
 
-test
+
 
 test('ordena por monto', ()=>{
     //const accion = ordenarPorMonto();
