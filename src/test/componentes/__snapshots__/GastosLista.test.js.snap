@@ -1,11 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`deberia renderizar la cabecera  1`] = `
+exports[`la lista de gastos con algunos gastos 1`] = `
 <div>
-  <h1>
-    Expendio Lista
-  </h1>
-  3
   <GastosListaItem
     date={0}
     descripcion="goma"
@@ -27,5 +23,13 @@ exports[`deberia renderizar la cabecera  1`] = `
     monto={4500}
     nota=""
   />
+</div>
+`;
+
+exports[`los gastosl lista sin contenido 1`] = `
+<div>
+  <p>
+     No hay Gastos ! 
+  </p>
 </div>
 `;
