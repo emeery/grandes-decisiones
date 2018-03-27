@@ -8,6 +8,7 @@ import { establecerTextoFiltros } from './acciones/filtros';
 import mostrarGastos from './selectores/gastos';
 import 'normalize.css/normalize.css';
 import './estilos/styles.scss';
+import 'react-dates/lib/css/_datepicker.css';
 
 const tienda = configuraTienda();
 tienda.dispatch(

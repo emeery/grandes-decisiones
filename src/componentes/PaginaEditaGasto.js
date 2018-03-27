@@ -22,7 +22,7 @@ const PaginaEditaGasto = (props) => {
         }}> X </button>
     </div> );
 };
-
+// subconjunto 
 const mapStateToProps = (state, props) => {
     return { 
         gasto: state.gastos.find((gasto) => gasto.id === props.match.params.id) 
