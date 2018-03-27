@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` el componente GastosListaItem 1`] = `
+<div>
+  <Link
+    replace={false}
+    to="/edita/2"
+  >
+    <h3>
+       
+      renta
+       
+    </h3>
+  </Link>
+  <h2>
+     
+    109500
+     - 
+    -345600000
+  </h2>
+</div>
+`;
