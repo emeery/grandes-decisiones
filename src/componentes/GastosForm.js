@@ -18,7 +18,7 @@ class GastosForm extends React.Component {
         };
     }
     descripcionCambio = (e) => {
-        const descripcion = e.target.value;
+        const descripcion = e.target.value; 
         this.setState(() => ({ descripcion })); 
     };
     // persistncia ();

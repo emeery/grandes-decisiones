@@ -21,11 +21,20 @@ test('deberia renderizar error para submit no valido',()=>{
     expect(envoltura).toMatchSnapshot();
 });
 
-test('descripcion en el cambio de entrada', ()=>{
-    const value = 'una descripcion';
+test('descripcionCambio', ()=>{
+    const value = 'descripciones';
     const envoltura = shallow(<GastosForm />);
     envoltura.find('input').at(0).simulate('change', {
         target: { value }
     });
     expect(envoltura.state('descripcion')).toBe(value);
+});
+// sin at(0) porque solo existe un textarea
+test('cambio de nota notaCambio',()=>{
+    const value = 'nuevo valor nota';
+    const envoltura = shallow(<GastosForm/>);
+    envoltura.find('textarea').simulate('change',{
+        target: { value }
+    });
+    expect(envoltura.state('nota')).toBe(value);
 });
