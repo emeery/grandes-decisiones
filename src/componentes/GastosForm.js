@@ -28,7 +28,7 @@ class GastosForm extends React.Component {
     };
     montoCambio = (e) => {
         const monto = e.target.value;
-        if(!monto || monto.match(/^\d{1,}(\.\d{0,2})?$/)) {
+        if (!monto || monto.match(/^\d{1,}(\.\d{0,2})?$/)) {
             this.setState(() => ({ monto }));
         }
     };
@@ -57,9 +57,8 @@ class GastosForm extends React.Component {
     };
     render() {
         return( <div>
-        <form onSubmit={this.onSubmit}>
-            {this.state.error && <p>
-                {this.state.error}</p>}   
+        {this.state.error && <p>{this.state.error}</p>}
+        <form onSubmit={this.onSubmit}>      
             <input 
             type='text'
             placeholder='Descripcion'
@@ -69,7 +68,7 @@ class GastosForm extends React.Component {
             />
             <input
             type='text'
-            placeholder='monto'
+            placeholder='Monto'
             value={this.state.monto}
             onChange={this.montoCambio}
             />

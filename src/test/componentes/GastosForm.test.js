@@ -36,5 +36,23 @@ test('cambio de nota notaCambio',()=>{
     envoltura.find('textarea').simulate('change',{
         target: { value }
     });
-    expect(envoltura.state('nota')).toBe(value);
+    expect(envoltura.state('nota')).toBe(value  );
 });
+
+test('cambio de monto montoCambio',()=>{
+    const value = '23.50';
+    const envoltura = shallow(<GastosForm/>);
+    envoltura.find('input').at(1).simulate('change',{
+        target : { value }
+    });
+    expect(envoltura.state('monto')).toBe(value);
+}); 
+
+test('cambio de monto montoCambio',()=>{
+    const value = '12.122';
+    const envoltura = shallow(<GastosForm/>);
+    envoltura.find('input').at(1).simulate('change',{
+        target : { value }
+    });
+    expect(envoltura.state('monto')).toBe('');
+}); 

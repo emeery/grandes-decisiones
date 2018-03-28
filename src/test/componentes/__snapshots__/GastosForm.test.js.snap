@@ -14,7 +14,7 @@ exports[`componente GastosForm 1`] = `
     />
     <input
       onChange={[Function]}
-      placeholder="monto"
+      placeholder="Monto"
       type="text"
       value=""
     />
@@ -22,7 +22,7 @@ exports[`componente GastosForm 1`] = `
       anchorDirection="left"
       customCloseIcon={null}
       customInputIcon={null}
-      date={"2018-03-28T21:47:44.401Z"}
+      date={"2018-03-28T22:24:49.610Z"}
       daySize={39}
       disabled={false}
       displayFormat={[Function]}
@@ -116,7 +116,7 @@ exports[`componente GastosForm con gastos 1`] = `
     />
     <input
       onChange={[Function]}
-      placeholder="monto"
+      placeholder="Monto"
       type="text"
       value="1095"
     />
@@ -206,12 +206,12 @@ exports[`componente GastosForm con gastos 1`] = `
 
 exports[`deberia renderizar error para submit no valido 1`] = `
 <div>
+  <p>
+    ingresa los 2 valores
+  </p>
   <form
     onSubmit={[Function]}
   >
-    <p>
-      ingresa los 2 valores
-    </p>
     <input
       autoFocus={true}
       onChange={[Function]}
@@ -221,7 +221,7 @@ exports[`deberia renderizar error para submit no valido 1`] = `
     />
     <input
       onChange={[Function]}
-      placeholder="monto"
+      placeholder="Monto"
       type="text"
       value=""
     />
@@ -229,7 +229,7 @@ exports[`deberia renderizar error para submit no valido 1`] = `
       anchorDirection="left"
       customCloseIcon={null}
       customInputIcon={null}
-      date={"2018-03-28T21:47:44.408Z"}
+      date={"2018-03-28T22:24:49.610Z"}
       daySize={39}
       disabled={false}
       displayFormat={[Function]}
