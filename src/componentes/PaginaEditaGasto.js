@@ -6,28 +6,42 @@ import {
     removerGasto 
 } from '../acciones/gastos';
 
-const PaginaEditaGasto = (props) => {
-    return ( 
-        <div>
-        <GastosForm
-        gasto ={ props.gasto }
-        onSubmit ={( gasto ) => {
-            props.dispatch( editarGasto(props.gasto.id, gasto));
-            props.history.push('/');
-        }}
-        />
-        <button onClick={() => {
-            props.dispatch( removerGasto({id: props.gasto.id}));
-            props.history.push('/')
-        }}> X </button>
-    </div> );
-};
+export class PaginaEditaGasto extends React.Component {
+    onSubmit = ( gasto ) => {
+        this.props.editarGasto(this.props.gasto.id, gasto);
+        this.props.history.push('/');
+    }
+    onRemove = () => {
+        this.props.dispatch( removerGasto({id: this.props.gasto.id}));
+        this.props.history.push('/')
+    }
+    render() {
+        return(<div>
+            <GastosForm
+            gasto={this.props.gasto}
+            onSubmit={this.onSubmit}
+            />
+            <button 
+            onClick={this.onRemove} 
+            > X </button>
+        </div>
+        );
+    }
+}
+// const PaginaEditaGasto = (props) => {
+//     return ( 
+//          );
+// };
 // subconjunto 
-const mapStateToProps = (state, props) => {
-    return { 
-        gasto: state.gastos.find((gasto) => gasto.id === props.match.params.id) 
-    };
-};
+const mapStateToProps = (state, props) => ({
+    gasto: state.gastos.find((gasto) => gasto.id === props.match.params.id) 
+});
 
-export default connect(mapStateToProps)(PaginaEditaGasto);
+const mapDispatchToProps = (dispatch, props) => ({
+    editarGasto: (id, gasto) => dispatch(editarGasto(id, gasto)),
+    removerGasto: (data) => dispatch(removerGasto( data ))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps )(PaginaEditaGasto);
+
 
