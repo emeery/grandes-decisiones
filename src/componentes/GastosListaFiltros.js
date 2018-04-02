@@ -10,19 +10,28 @@ import {
     establecerFechaFin
 } from '../acciones/filtros';
 
-class GastosListaFiltros extends React.Component {
+export class GastosListaFiltros extends React.Component {
     state = {
         calendarFocused: null
     };
+    // this.props.dispatch
     onDatesChange = ({startDate, endDate}) => {
-        this.props.dispatch(
-            establecerFechaInicio(startDate) );
-        this.props.dispatch(
-            establecerFechaFin(endDate) );
+        this.props.establecerFechaInicio(startDate);
+        this.props.establecerFechaFin(endDate);
     };
     onFocusChange = (calendarFocused) => {
         this.setState(() => ({ calendarFocused }));
-    }
+    };
+    onTextoChange = (e) => {
+        this.props.establecerTextoFiltros(e.target.value);
+    };
+    onSortChange = (e) => {
+        if (e.target.value === 'date') {
+            this.props.ordenarPorFecha();
+        } else if (e.target.value === 'monto') {
+            this.props.ordenarPorMonto();
+        }
+    };
     render() {
         return  ( 
         <div>
@@ -30,21 +39,14 @@ class GastosListaFiltros extends React.Component {
         <input 
         type='text' 
         value={this.props.filtros.texto}
-        onChange={(e) => {
-            this.props.dispatch(
-                establecerTextoFiltros(e.target.value));
-        }} />
+        onChange={this.onTextoChange}
+        />
         
         <select 
         value={this.props.filtros.ordenarPor}
-        onChange={(e) => {
-            if (e.target.value === 'date') {
-                this.props.dispatch(ordenarPorFecha() );
-            } else if (e.target.value === 'monto') {
-                this.props.dispatch(ordenarPorMonto() );
-            }
-        }}
+        onChange={this.onSortChange}
         >
+        
         <option value='date'>
             fecha </option>
         <option value='monto'>
@@ -65,8 +67,13 @@ class GastosListaFiltros extends React.Component {
     }
 };
 
-const mapStateToProps = (state) => {
-    return { filtros: state.filtros };
-};
-
-export default connect(mapStateToProps)(GastosListaFiltros);
+const mapStateToProps = (state) => ({
+    filtros: state.filtros });
+const mapDispatchToProps = (dispatch) => ({
+    establecerTextoFiltros: (texto) => dispatch(establecerTextoFiltros(texto) ),
+    ordenarPorMonto: () => dispatch(ordenarPorMonto() ),
+    ordenarPorFecha: () => dispatch(ordenarPorFecha() ),
+    establecerFechaInicio: (startDate) => dispatch(establecerFechaInicio(startDate) ),
+    establecerFechaFin: (endDate) => dispatch(establecerFechaFin(endDate) )
+});
+export default connect(mapStateToProps, mapDispatchToProps)(GastosListaFiltros);
