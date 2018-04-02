@@ -8,8 +8,8 @@ const filtros = {
 };
 
 const altfiltros = {
-    texto: '',
-    sortBy: 'date',
+    texto: 'cuentas',
+    sortBy: 'monto',
     startDate: moment(0),
     endDate: moment(0).add(3, 'days')
 };

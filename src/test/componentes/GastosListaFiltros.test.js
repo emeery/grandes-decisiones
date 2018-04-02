@@ -28,6 +28,13 @@ test('snapshot GastosListaFiltros',()=>{
     expect(envoltura).toMatchSnapshot();
 });
 
+test('snapshot GastosListaFiltros con altfiltros',()=>{
+    envoltura.setProps({
+        filtros: altfiltros
+    });
+    expect(envoltura).toMatchSnapshot();
+});
+
 // beforeEach(()=>{
 //     crearGastito = jest.fn();
 //     history = { push: jest.fn() };
