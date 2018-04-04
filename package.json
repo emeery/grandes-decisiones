@@ -6,9 +6,9 @@
   "license": "MIT",
   "scripts": {
     "servidor": "live-server public/",
-    "mira:des": "webpack",
-    "mira:prod": "webpack -p --env production",
-    "mira:servidor": "webpack-dev-server",
+    "build:dev": "webpack",
+    "build:prod": "webpack -p --env production",
+    "dev-server": "webpack-dev-server",
     "test": "jest --config=jest.config.json",
     "start": "node server/server.js",
     "heroku-postbuild" : "yarn run build:prod"
