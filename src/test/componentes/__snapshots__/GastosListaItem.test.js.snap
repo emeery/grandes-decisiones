@@ -12,11 +12,10 @@ exports[` el componente GastosListaItem 1`] = `
        
     </h3>
   </Link>
-  <h2>
-     
-    109500
-     - 
-    -345600000
-  </h2>
+  <p>
+    $1,095.00
+    -
+    December 27th, 1969
+  </p>
 </div>
 `;

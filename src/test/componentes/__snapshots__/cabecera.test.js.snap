@@ -3,14 +3,11 @@
 exports[`deberia renderizar la cabecera  1`] = `
 <header>
   <h1>
-    Libros de Notas.
+    Cuales son tus gastos ?
   </h1>
   <h3>
-    La pieza faltante.
+    estrategias para el ahorro
   </h3>
-  <h4>
-    throw all that.
-  </h4>
   <NavLink
     activeClassName="is-active"
     exact={true}

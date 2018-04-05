@@ -1,18 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-//import {connect } from 'react-redux';
-// import {removerGasto} from '../acciones/gastos'; connect 
-
-// destructuracion dispatch
-        
-//dispatch, id, descripcion, monto, fecha
+import moment from 'moment';
+import numeral from 'numeral';
 const GastosListaItem = ({
     id, descripcion, monto, date}) => (
     <div>
         <Link to={`/edita/${id}`}>
         <h3> {descripcion} </h3>
         </Link>
-        <h2> {monto} - {date}</h2>
+        <p> 
+            {numeral(monto / 100 ).format('$0,0.00')} 
+        - 
+            {moment(date).format('MMMM Do, YYYY')}
+        </p>
        
     </div>
 );
