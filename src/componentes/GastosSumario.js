@@ -6,16 +6,16 @@ import seleccionaGastosTotal from '../selectores/gastos-totales';
 
 export const GastosSumario = ({ gastosContador, gastosTotal}) => {
     //const sinGastos = gastosContador === 0 ? 'no hay gastos' : gastosContador;
-    const gastosPalabra = gastosContador === 1 ? 'gasto' : 'gastos';
+    const gastosPalabra = gastosContador === 1 ? 'Gasto' : 'Gastos';
     //gastosPalabra === 0 ? '' : gastosContador;
     const formatoGastosTotal = numeral(gastosTotal / 100).format('$0,0.00'); 
     
     return(<div>
         <h2> 
-        viendo -
+        Viendo -
         {gastosContador}
         {gastosPalabra} -
-        total 
+        Total - 
         {formatoGastosTotal}</h2>
         </div>);
 };
