@@ -2,10 +2,8 @@
 
 exports[` el componente escritorio 1`] = `
 <div>
+  <Connect(GastosSumario) />
   <Connect(GastosListaFiltros) />
-  <h2>
-    Página Escritorio.
-  </h2>
   <Connect(GastosLista) />
 </div>
 `;
