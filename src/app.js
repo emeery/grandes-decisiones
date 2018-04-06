@@ -6,9 +6,11 @@ import configuraTienda from './tienda/configuraTienda';
 import { crearGasto } from './acciones/gastos';
 import { establecerTextoFiltros } from './acciones/filtros';
 import mostrarGastos from './selectores/gastos';
+
 import 'normalize.css/normalize.css';
 import './estilos/styles.scss';
 import 'react-dates/lib/css/_datepicker.css';
+import '../firebase/firebase';
 
 const tienda = configuraTienda();
 

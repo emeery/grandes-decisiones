@@ -1,5 +1,5 @@
 import moment from 'moment';
-// valida las fechas y el texto 
+// valida las fechas y el texto /
 // seleccionaGasto
 export default (gastos, {texto, ordenarPor, startDate, endDate}) => {
     return gastos.filter((gasto) => {
