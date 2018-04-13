@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import numeral from 'numeral';
-import seleccionaGastos from '../selectores/gastos';
+import seleccionaGastos from '../selectores/gastos'; // creadoEnElMomento
 import seleccionaGastosTotal from '../selectores/gastos-totales';
 
 export const GastosSumario = ({ gastosContador, gastosTotal}) => {

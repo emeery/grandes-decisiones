@@ -1,6 +1,9 @@
-import { createStore, combineReducers } from 'redux';
+import { createStore, combineReducers,  applyMiddleware} from 'redux';
+import thunk from 'redux-thunk';  
 import gastosReducer from '../reducers/gastosReducer';
 import filtrosReducer from '../reducers/filtrosReducer';  
+
+const componePotencia = window.__REDUX_DEVTOOLS_EXTENSION__ || compose;
 // reducer general
 export default () => {
     const tienda = createStore(
@@ -8,6 +11,6 @@ export default () => {
             gastos: gastosReducer,
             filtros: filtrosReducer
         }),
-        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+        applyMiddleware(thunk)
     ); return tienda;
 };

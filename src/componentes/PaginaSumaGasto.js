@@ -1,12 +1,12 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import GastosForm from './GastosForm';
-import {crearGasto} from '../acciones/gastos';
+import {empezarCrearGasto} from '../acciones/gastos';
 // props - gastillo
 
 export class PaginaSumaGasto extends React.Component {
     onSubmit = (gasto) => {
-        this.props.crearGasto(gasto);
+        this.props.empezarCrearGasto(gasto);
         this.props.history.push('/');
     }
     render() {
@@ -21,7 +21,7 @@ export class PaginaSumaGasto extends React.Component {
 
 
 const mapDispatchToProps = (dispatch) => ({
-        crearGasto: (gasto) => dispatch(crearGasto(gasto))
+        empezarCrearGasto: (gasto) => dispatch(empezarCrearGasto(gasto))
 });
 export default connect(undefined, mapDispatchToProps)(PaginaSumaGasto);
 

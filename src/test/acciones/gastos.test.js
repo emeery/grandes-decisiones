@@ -2,9 +2,11 @@ import {
     crearGasto,
     removerGasto, 
     editarGasto } from '../../acciones/gastos';
+import gastos from '../accesorios/gastos';
 
  const suma = (a, b) => a + b;
-    // const unSaludo = (nombre='anonimo') => `hola ${nombre}!`;
+ // const unSaludo = 
+ // (nombre='anonimo') => `hola ${nombre}!`;
 
 test('esperamos dos numeros que sumen 13',()=>{
     const resultado = suma(8, 5);
@@ -32,32 +34,25 @@ test('deberia editar el gasto', () => {
 });
 
 test('crea el gasto', () =>{
-    const datosGasto = {
-        descripcion: 'renta',
-        monto: 2000,
-        date: 1000,
-        nota: 'ultima renta del mes'
-    };
-    const accion = crearGasto(datosGasto);
+    
+    const accion = crearGasto(gastos[2]);
     expect(accion).toEqual({
         type: 'CREAR_GASTO',
-        gasto: {
-            ...datosGasto,
-            id: expect.any(String)
-        }
+        gasto: gastos[2]
     })   
 });
 
-test('un gasto con valores default', () =>{
-    const accion = crearGasto();
-    expect(accion).toEqual({
-        type: 'CREAR_GASTO',
-        gasto: {
-            id: expect.any(String),
-            descripcion: '',
-            monto: 0,
-            date: 0,
-            nota: ''
-        }
-    });
-});
+// swtup add expense actin object with provided values 
+// test('un gasto con valores default', () =>{
+//     const accion = crearGasto();
+//     expect(accion).toEqual({
+//         type: 'CREAR_GASTO',
+//         gasto: {
+//             id: expect.any(String),
+//             descripcion: '',
+//             monto: 0,
+//             date: 0,
+//             nota: ''
+//         }
+//     });
+// });

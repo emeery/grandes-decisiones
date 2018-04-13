@@ -2,16 +2,17 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {PaginaSumaGasto} from '../../componentes/PaginaSumaGasto';
 import gastos from '../accesorios/gastos';
-import { crearGasto } from '../../acciones/gastos';
+import { empezarCrearGasto } from '../../acciones/gastos';
 
-let crearGastito, history, envoltura;
+let empezarUnGasto, history, envoltura;
 
 beforeEach(()=>{
-    crearGastito = jest.fn();
+    empezarUnGasto = jest.fn();
     history = { push: jest.fn() };
-    envoltura = shallow(<PaginaSumaGasto
+    envoltura = shallow(
+        <PaginaSumaGasto
         history={history}
-        crearGasto={crearGastito}      
+        empezarCrearGasto={empezarUnGasto}      
         />);
 });
 
@@ -22,5 +23,5 @@ test('componente PaginaSumaGasto',()=>{
 test('controla onSubmit PaginaSumaGasto ',()=>{
     envoltura.find('GastosForm').prop('onSubmit')(gastos[1]);
     expect(history.push).toHaveBeenLastCalledWith('/');
-    expect(crearGastito).toHaveBeenLastCalledWith(gastos[1]);
+    expect(empezarUnGasto).toHaveBeenLastCalledWith(gastos[1]);
 });

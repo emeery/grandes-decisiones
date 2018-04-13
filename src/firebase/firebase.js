@@ -12,6 +12,16 @@ const config = {
 
 firebase.initializeApp(config);
 
-firebase.database().ref().set({
-  nombre: 'Jerry Bautista'
-});
+const basedatos = firebase.database();
+
+export {firebase, basedatos as default };
+
+// push, on, off, set, update, then, catch - firebase
+// push genera una nueva propiedad
+// operaciones CRUD
+
+
+//
+// basedatos.ref('gastos').on('child_removed', (snapshot) => {
+//   console.log(snapshot.key, snapshot.val());
+// });

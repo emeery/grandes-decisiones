@@ -1,22 +1,26 @@
 import uuid from 'uuid';
+import basedatos from '../firebase/firebase';
 
-export const crearGasto = ({
-    descripcion = '', 
-    nota = '',
-    monto = 0,
-    date = 0
- } = {} 
-) => ({
+// exporta una accion que llama a una funcion y un objeto gasto
+export const crearGasto = (gasto) => ({
     type: 'CREAR_GASTO',
-    gasto: {
-        id: uuid(),
-        descripcion,
-        nota,
-        monto,
-        date
-    }
+    gasto
 });
-// 
+
+export const empezarCrearGasto = (gastoDato= {}) => {
+    return (dispatch) => {
+        const { descripcion = '', nota = '', 
+        monto= 0, date=0} = gastoDato;
+        const gasto = {descripcion, nota, monto, date };
+        basedatos.ref('gastos').push(gasto).then((ref) => {
+            dispatch(crearGasto({
+                id: ref.key,
+                ...gasto
+            }));
+        });
+    };
+}
+
 export const removerGasto = ({ id } = {}) => ({
     type: 'REMUEVE_GASTO',
     id
