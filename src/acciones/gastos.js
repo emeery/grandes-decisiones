@@ -12,7 +12,7 @@ export const empezarCrearGasto = (gastoDato= {}) => {
         const { descripcion = '', nota = '', 
         monto= 0, date=0} = gastoDato;
         const gasto = {descripcion, nota, monto, date };
-        basedatos.ref('gastos').push(gasto).then((ref) => {
+        return basedatos.ref('gastos').push(gasto).then((ref) => {
             dispatch(crearGasto({
                 id: ref.key,
                 ...gasto
