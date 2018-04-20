@@ -3,6 +3,7 @@ import {
     removerGasto, 
     editarGasto,
     empezarCrearGasto } from '../../acciones/gastos';
+import basedatos from '../../firebase/firebase';
 import gastos from '../accesorios/gastos';
 import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';

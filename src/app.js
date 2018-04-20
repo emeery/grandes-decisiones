@@ -11,7 +11,6 @@ import 'normalize.css/normalize.css';
 import './estilos/styles.scss';
 import 'react-dates/lib/css/_datepicker.css';
 import './firebase/firebase';
-// './playground/promesas';
 
 const tienda = configuraTienda();
 
