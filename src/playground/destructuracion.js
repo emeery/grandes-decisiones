@@ -21,13 +21,14 @@ if (ciudad && temperatura) {
     console.log(`la temperatura en el ${ciudad} es de ${temperatura} grados.`);
 } else { console.log('faltan datos'); } 
 
-//console.log(`${persona.nombre} tiene actualmente ${persona.edad}`); 
-const libro = {
-    titulo: 'El ego es tu enemigo',
-    autor: 'Ryan Holiday',
-    editorial: {
-        nombre: 'Penguin'
-    }
+// console.log(`${persona.nombre} tiene actualmente ${persona.edad}`); 
+const pista = {
+    titulo: 'Hear Me Now',
+    autor: [
+        'Alok',
+        'Bruno Martini'
+    ], 
+    compañia: 'Spinnin Records'
 };
 
 const { nombre:nombreEditorial= 'Auto-Publicado'} = libro.editorial;
@@ -39,7 +40,7 @@ console.log(nombreEditorial); //
  */
 
  const direccion = ['Av. Insurgentes', 'Ciudad de México',
-    'Distrito Federal', '07469' ];
+    'Distrito Federal', '#E0749' ];
 const [, ciudad, estado,] = direccion;
 console.log(`Actualmente resides en la ${ciudad}, ${estado}`);
 

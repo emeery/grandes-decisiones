@@ -34,7 +34,6 @@ test('establecer texto filtros', () => {
 });
 
 
-
 test('ordena por monto', ()=>{
     //const accion = ordenarPorMonto();
     expect(ordenarPorMonto()).toEqual({
