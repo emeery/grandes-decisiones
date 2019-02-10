@@ -1,18 +1,15 @@
 import React from 'react';
-const Cabecera = (props) => (<div className='cabecera-nota'>
-        <div className='contenedor'>
-                <h1 
-                className='cabecera__titulo'
-                >{props.titulo}</h1>
-                
-                {props.subtitulo && 
-                <h3 
-                className='cabecera__subtitulo'
-                >{props.subtitulo}</h3> 
-                }
-        </div>
-        </div> ); 
-export default Cabecera;
+import {NavLink} from 'react-router-dom';
+// una nueva nota pendiente, el oscuro fondo tomaba un aspecto lúgubre 
+// y la unica fuente de luz que despedía 3#sx1$. dotted edge 
 
-Cabecera.defaultProps = {
-        titulo: 'Indecisiones' };
+const Cabecera = () => (
+    <header>
+    <h1>Portafolio</h1>
+    <NavLink to='/' activeClassName='is-active' exact={true}>Hogar</NavLink>
+    <NavLink to='/portafolio' activeClassName='is-active' exact={true}>Portafolio</NavLink>
+    <NavLink to='/contacto'activeClassName='is-active'>Contacto</NavLink>
+    </header>
+
+); export default Cabecera;
+
