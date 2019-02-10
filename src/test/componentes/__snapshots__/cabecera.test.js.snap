@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`deberia renderizar la cabecera  1`] = `
+<header>
+  <h1>
+    Cuales son tus gastos ?
+  </h1>
+  <h3>
+    estrategias para el ahorro
+  </h3>
+  <NavLink
+    activeClassName="is-active"
+    exact={true}
+    to="/"
+  >
+    Escritorio
+  </NavLink>
+  <NavLink
+    activeClassName="is-active"
+    to="/crealo"
+  >
+    Crear Gastos
+  </NavLink>
+</header>
+`;

@@ -1,2 +1,1 @@
-## Grandes decisiones
-# toma las decisiones por ti.
+## un recordatorio.

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` el componente escritorio 1`] = `
+<div>
+  <Connect(GastosSumario) />
+  <Connect(GastosListaFiltros) />
+  <Connect(GastosLista) />
+</div>
+`;

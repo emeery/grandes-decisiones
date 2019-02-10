@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`la lista de gastos con algunos gastos 1`] = `
+<div>
+  <GastosListaItem
+    date={0}
+    descripcion="goma"
+    id="1"
+    monto={195}
+    nota=""
+  />
+  <GastosListaItem
+    date={-345600000}
+    descripcion="renta"
+    id="2"
+    monto={109500}
+    nota=""
+  />
+  <GastosListaItem
+    date={345600000}
+    descripcion="tarjeta credito"
+    id="3"
+    monto={4500}
+    nota=""
+  />
+</div>
+`;
+
+exports[`los gastosl lista sin contenido 1`] = `
+<div>
+  <p>
+     No hay Gastos ! 
+  </p>
+</div>
+`;

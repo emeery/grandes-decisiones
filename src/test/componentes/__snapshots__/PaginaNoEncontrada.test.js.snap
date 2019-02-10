@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`el componnte PaginaNoEncontrada 1`] = `
+<div>
+  <h2>
+    404 - UPS!
+  </h2>
+  <h3>
+    No es lo que buscas?
+  </h3>
+  <Link
+    replace={false}
+    to="/"
+  >
+    a casa
+  </Link>
+</div>
+`;
